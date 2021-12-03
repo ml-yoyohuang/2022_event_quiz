@@ -1,0 +1,46 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import DemoExampleComponent from './DemoExampleComponent.vue';
+
+
+<Meta title='DemoExampleComponent' component={DemoExampleComponent} />
+
+# DemoExampleComponent
+
+Some **markdown** description, or whatever you want.
+- 可以寫 markdown
+
+<Story name='basic' height='auto'>{{
+  components: { DemoExampleComponent },
+  data(){
+    return {}
+  },
+  methods:{
+  },
+  template: `
+    <DemoExampleComponent 
+      label="ButtonLabel"
+      @click="log('click')"
+      />
+  `,
+}}</Story>
+
+## Color Black
+<Story name='color black' height='auto'>{{
+  components: { DemoExampleComponent },
+  data(){
+    return {}
+  },
+  methods:{
+  },
+  template: `
+    <DemoExampleComponent 
+      label="ColorBlack"
+      color="#000000"
+      @click="log('click')"
+      />
+  `,
+}}</Story>
+
+## Props
+
+<Props of={DemoExampleComponent} />

@@ -1,0 +1,36 @@
+<script>
+import Vuex from 'vuex';
+
+interface Data {
+
+}
+export default {
+  components: {
+  },
+  props: {},
+  data: (): Data => ({
+  }),
+  computed: {
+    ...Vuex.mapState([]),
+    ...Vuex.mapGetters([]),
+  },
+  mounted() {
+  },
+  beforeDestroy() {
+  },
+  methods: {
+    ...Vuex.mapMutations([]),
+    ...Vuex.mapActions([]),
+  },
+};
+</script>
+
+<template lang="pug">
+.{{ dashCase name }}
+  h1 {{ dashCase name }}
+</template>
+
+<style lang="stylus">
+.{{ dashCase name }}
+  // display: none
+</style>

@@ -1,0 +1,138 @@
+.h2 Form
+.form
+  p.form-title Normal Input
+  input.input(placeholder="placeholder")
+  input.input(placeholder="placeholder" value="MXTeamFrondend")
+  .demo-line
+  p.form-title Error Input with message
+  input.input.is-error(placeholder="placeholder" value="asdf")
+  p.error-msg Error Message
+  input.input.is-error(placeholder="placeholder" value="asdf")
+  p.error-msg.style-ic Error msg
+
+  .demo-line
+  p.form-title Normal Textarea
+  textarea.textarea(name="", cols="30", rows="10" placeholder="placeholder")
+  p.form-title Error Textarea with message
+  textarea.textarea.is-error(name="", cols="30", rows="10" placeholder="placeholder")
+  p.error-msg Error msg
+  
+  .demo-line
+  p.form-title Normal Select
+  .select-wrap
+    select.select(name="")
+      option(value="option 1") option 1
+      option(value="option 2") option 2
+      option(value="option 3") option 3
+  .select-wrap
+    select.select(name="")
+      optgroup(label="Group1")
+        option(value="option 1") option 1
+        option(value="option 2") option 2
+      optgroup(label="Group2")
+        option(value="option 3") option 3
+        option(value="option 4") option 4
+  p.form-title Error Select with message
+  .select-wrap.is-error
+    select.select(name="")
+      option(value="option 1") option 1
+      option(value="option 2") option 2
+      option(value="option 3") option 3
+  p.error-msg Error msg
+  p.form-title Short Select (auto width)
+  .select-wrap.style-autowidth
+    select.select(name="")
+      option(value="option 1") option 1
+      option(value="option 2") option 2
+      option(value="option 3") option 3
+  p.form-title Select with Placeholder
+  .select-wrap
+    select.select(name="" required)
+      option(value="" hidden) placeholder
+      option(value="option 1") option 1
+      option(value="option 2") option 2
+      option(value="option 3") option 3
+  p.form-title Error Select with Placeholder with message
+  .select-wrap.is-error
+    select.select(name="" required)
+      option(value="" hidden) placeholder
+      option(value="option 1") option 1
+      option(value="option 2") option 2
+      option(value="option 3") option 3
+  p.error-msg Error msg
+
+  .demo-line
+  p.form-title Checkbox
+  article
+    p
+      label.module-radio#agreement
+        input(type="checkbox", name="iagree")
+        i.module-symbol
+        span 我已閱讀並同意
+          a(class="style-link" href="#") 個人資料條款與活動注意事項
+  p.form-title Checkbox with Error
+  article
+    p.is-error
+      label.module-radio#agreement
+        input(type="checkbox", name="iagree")
+        i.module-symbol
+        span 我已閱讀並同意
+          a(class="style-link" href="#") 個人資料條款與活動注意事項
+  p.error-msg Error msg 我是錯誤訊息
+
+  .demo-line
+  p.form-title Checkboxes
+  article
+    p
+      label.module-radio
+        input(type="checkbox", name="checkbox0")
+        i.module-symbol
+        span 選項1
+      //- 寫在 _mixin.pug 裡
+      +checkbox(name='checkbox0')(class="text-class", id="test-id") 選項2
+      +checkbox(name="checkbox0" checked) 選項3
+  p.form-title Checkboxes style-disabled
+  p
+    +checkbox.style-disabled(name="checkbox1" checked) 選項4 disabled
+    +checkbox.style-disabled(name="checkbox1") 選項5 disabled
+  p.form-title Checkboxes style-error
+  p
+    +checkbox.style-error(name="checkbox2" checked) 選項4 disabled
+    +checkbox.style-error(name="checkbox2") 選項5 disabled
+
+  p.form-title Radios
+  article
+    p
+      label.module-radio
+        input(type="radio", name="radio0")
+        i.module-symbol
+        span 選項1
+      //- 寫在 _mixin.pug 裡
+      +radio(name="radio0" checked) 選項2
+      +radio(name="radio0") 選項3
+      +radio(name="radio0") 選項4
+  p.form-title Radios style-disabled
+  p
+    +radio.style-disabled(name="radio1") 選項2
+    +radio.style-disabled(name="radio1") 選項3
+    +radio.style-disabled(name="radio1" checked) 選項4
+  p.form-title Radios with Error
+  article
+    p.is-error
+      +radio.style-error(name="radio2") 選項1
+      +radio.style-error(name="radio2") 選項2
+      +radio.style-error(name="radio2") 選項3
+  p.error-msg Error msg
+  p.form-title Vertical Radios
+  .module-radiogroup
+    each idx in Array.from(Array(3).keys())
+      p
+        +checkbox(name="quiz3")='選項' + idx
+  p.form-title Vertical Checkboxes
+  .module-radiogroup
+    p
+      +radio(name="quiz4") 選項1
+    p
+      +radio(name="quiz4") 選項2
+    p
+      +radio(name="quiz4") 選項3

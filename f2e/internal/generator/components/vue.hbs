@@ -1,0 +1,32 @@
+<script>
+// interface Props { }
+interface Data {
+
+}
+export default {
+  name: '{{ name }}',
+  components: {
+  },
+  props: {},
+  data: ():Data => ({
+  }),
+  computed: {
+  },
+  mounted() {
+  },
+  beforeDestroy() {
+  },
+  methods: {
+  },
+};
+</script>
+
+<template lang="pug">
+.{{ dashCase name }}
+  h1 {{ dashCase name }}
+</template>
+
+<style lang="stylus">
+.{{ dashCase name }}
+  // display: none
+</style>

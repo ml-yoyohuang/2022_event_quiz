@@ -1,0 +1,40 @@
+h2.h2 Container
+p.mb-2 黑底是 container 的範圍, 預設內推左右各 15px<br/>
+.py-1
+  .table.text-white.style-rwd
+    .thead
+      .tr
+        .th
+        .th.text-center
+          | Extra small
+          br
+          small #{'<576px'}
+        .th.text-center
+          | Small
+          br
+          small ≥576px
+        .th.text-center
+          | Medium
+          br
+          small ≥768px
+        .th.text-center
+          | Large
+          br
+          small ≥992px
+        .th.text-center
+          | Extra large
+          br
+          small ≥1200px
+        .th.text-center
+          | 1920
+          br
+          small ≥1440px
+    .tbody
+      .tr
+        .th.text-nowrap(scope='row') Max container width
+        .td(data-label="<576px") None (auto)
+        .td(data-label="≥576px") 540px
+        .td(data-label="≥768px") 720px
+        .td(data-label="≥992px") 960px
+        .td(data-label="≥1200px") 1140px
+        .td(data-label="≥1440px") 1320px

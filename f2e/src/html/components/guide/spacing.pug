@@ -1,0 +1,78 @@
+.h1 Spacing
+.h2 bootstrap 內建的
+.row
+  - 
+    var list = [
+      '0',
+      '0.25rem',
+      '0.5rem',
+      '1rem',
+      '1.5rem',
+      '3rem',
+    ]
+  each name,idx in list
+    .col-2
+      .demo-text.mb-2=`.p-${idx}  (${name})`
+      .border
+        .d-inline-block.text-white.bg-primary(class="p-"+idx)
+          span 1
+  each name,idx in list
+    .col-2
+      .demo-text.mb-2=`.m-${idx}  (${name})`
+      .border
+        .d-inline-block.text-white.bg-primary(class="m-"+idx)
+          span 1
+.demo-line
+.h2 MX Guide 新增的
+.row
+  each idx in Array.from(Array(10).keys())
+    - var value = (idx+1) * 5
+    .col-2
+      .demo-text.mb-2='.p-' + value + 'px'
+      .d-inline-block.border.border-primary(class="p-"+value+'px')
+        span 1
+-
+  var list = [
+    '0',
+    '0.25rem',
+    '5rem',
+    '1rem',
+    '1.5rem',
+    '3rem',
+  ]
+mixin spacingBox()
+  .mb-0.h4.demo-box.bg-primary.flex-center.text-white 1
+  .mb-0.h4.demo-box.bg-secondary.flex-center.text-white 2
+  .mb-0.h4.demo-box.bg-success.flex-center.text-white 3
+  .mb-0.h4.demo-box.bg-danger.flex-center.text-white 4
+.demo-line
+.h2 space between
+each name,index in list
+  .demo-p
+    .demo-text=`.space-x-${index}`
+      span.ml-3=`(${name})`
+    .d-flex(class='space-x-'+index)
+      +spacingBox()
+guide-response-demo
+  template(v-slot="{selectIdx}")
+    .border.border-primary.rounded
+      pre.rounded-top.bg-dark.p-3.text-white-50
+        span='<div class=" '
+        span.space-x-2
+          span(:class="{'text-warning font-bold':selectIdx===0}") space-x-1
+          span(:class="{'text-warning font-bold':selectIdx===1}") space-x-sm-2
+          span(:class="{'text-warning font-bold':selectIdx===2}") space-x-md-3
+          span(:class="{'text-warning font-bold':selectIdx===3}") space-x-lg-4
+          span(:class="{'text-warning font-bold':selectIdx===4}") space-x-lx-5
+        span=' ">'
+        br
+        span.ml-3='<div>1</div>'
+        br
+        span.ml-3='<div>2</div>'
+        br
+        span.ml-3='<div>3</div>'
+        br
+        span='</div>'
+      .p-2
+        .d-flex(:class="'space-x-'+(selectIdx+1)")
+          +spacingBox()

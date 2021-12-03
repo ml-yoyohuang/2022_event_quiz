@@ -1,0 +1,32 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import Loader from './Loader.vue';
+
+
+<Meta title='Loader' component={
+  Loader
+} />
+
+# Loader
+
+Some **markdown** description, or whatever you want.
+
+<Story name='basic' height='auto'>{{
+  components: {
+    Loader
+  },
+  data(){
+    return {}
+  },
+  methods:{
+  },
+  template: `
+    <Loader />
+  `,
+}}</Story>
+
+
+## Props
+
+<Props of={
+  Loader
+} />

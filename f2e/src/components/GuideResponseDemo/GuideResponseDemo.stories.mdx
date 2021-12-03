@@ -1,0 +1,32 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import GuideResponseDemo from './GuideResponseDemo.vue';
+
+
+<Meta title='GuideResponseDemo' component={
+  GuideResponseDemo
+} />
+
+# GuideResponseDemo
+
+Some **markdown** description, or whatever you want.
+
+<Story name='basic' height='auto'>{{
+  components: {
+    GuideResponseDemo
+  },
+  data(){
+    return {}
+  },
+  methods:{
+  },
+  template: `
+    <GuideResponseDemo />
+  `,
+}}</Story>
+
+
+## Props
+
+<Props of={
+  GuideResponseDemo
+} />

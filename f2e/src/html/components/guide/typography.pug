@@ -1,0 +1,49 @@
+//
+  ######## ##    ## ########   #######   ######   ########     ###    ########  ##     ## ##    ## 
+    ##     ##  ##  ##     ## ##     ## ##    ##  ##     ##   ## ##   ##     ## ##     ##  ##  ##  
+    ##      ####   ##     ## ##     ## ##        ##     ##  ##   ##  ##     ## ##     ##   ####   
+    ##       ##    ########  ##     ## ##   #### ########  ##     ## ########  #########    ##    
+    ##       ##    ##        ##     ## ##    ##  ##   ##   ######### ##        ##     ##    ##    
+    ##       ##    ##        ##     ## ##    ##  ##    ##  ##     ## ##        ##     ##    ##    
+    ##       ##    ##         #######   ######   ##     ## ##     ## ##        ##     ##    ##    
+.h1 Typography
+.demo-line
+p.h2 font-size
+  each idx in Array.from(Array(6).keys())
+    - var index = idx + 1
+    .demo-p
+      .demo-text='.h' + index
+      #{'h'+index}(class=("h"+index +' demo-display-font-size')) 碧筵綰Lorem ipsum dolor, sit amet consectetur adipisicing elit. 中文字測試
+      
+.demo-line
+.h2 font bold
+.demo-p
+  .demo-text .font-weight-bold
+  h2.h2.font-weight-bold 碧筵綰Lorem ipsum dolor, sit amet consectetur adipisicing elit. 中文字測試
+.demo-p
+  .demo-text .font-weight-normal
+  h2.h2.font-weight-normal 碧筵綰Lorem ipsum dolor, sit amet consectetur adipisicing elit. 中文字測試
+.demo-p
+  .demo-text .font-italic
+  h2.h2.font-italic 碧筵綰Lorem ipsum dolor, sit amet consectetur adipisicing elit. 中文字測試
+
+.demo-line
+p.h2 light-height
+  each idx in Array.from(Array(6).keys())
+    - var index = idx + 1
+    .demo-p
+      .demo-text='.line-height-' + index
+      .bg-dark.text-light(class="line-height-"+ index) Lorem ipsum dolor, sit amet consectetur adipisicing elit. 中文字測試
+.demo-line
+p.h2 letter-spacing
+  .demo-p
+    .demo-text .letter-spacing-n2
+    .bg-dark.text-light(class="letter-spacing-n2") Lorem ipsum dolor, sit amet consectetur adipisicing elit. 中文字測試
+  .demo-p
+    .demo-text .letter-spacing-n1
+    .bg-dark.text-light(class="letter-spacing-n1") Lorem ipsum dolor, sit amet consectetur adipisicing elit. 中文字測試
+  each index in Array.from(Array(4).keys())
+    .demo-p
+      .demo-text='.letter-spacing-' + index
+      .bg-dark.text-light(class="letter-spacing-"+ index) Lorem ipsum dolor, sit amet consectetur adipisicing elit. 中文字測試
+

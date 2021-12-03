@@ -1,0 +1,50 @@
+-
+  var list = [
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+    'warning',
+    'info',
+    //- 
+    'pink',
+  ]
+  var text = [
+    'light bg-dark',
+    'dark',
+    'body',
+    'muted',
+    'white bg-dark',
+    'black-50',
+    'white-50 bg-dark',
+  ]
+  var colors = [
+    'light text-dark',
+    'dark',
+    'white text-dark',
+    'black',
+    'transparent',
+  ]
+.h2 Text Colors
+each className in list.concat(text)
+  .demo-p
+    .demo-text='text-'+className
+    .h3(class='text-'+className) Lorem ipsum dolor, sit amet consectetur adipisicing elit. 中文字測試
+.demo-line
+
+.h2 Background Colors
+.row
+  each className in list.concat(colors)
+    .col-6.col-md-2.mb-3
+      .demo-text='bg-'+className
+      .h3.demo-display-color.text-white.p-2.text-center.font-bold(class='bg-'+className style="height:50px;")
+.demo-line
+
+.h2 Border Colors
+.row
+  each className in list.concat(colors)
+    .col-6.col-md-2.mb-3
+      .demo-text='border-'+className
+      .h3.demo-display-color.border.p-2.text-center(
+        class=('border-'+className +' text-'+className)
+        style="height:50px;border-width:3px !important;")

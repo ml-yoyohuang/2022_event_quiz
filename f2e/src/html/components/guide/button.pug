@@ -1,0 +1,34 @@
+-
+  var list = [
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+    'warning',
+    'info',
+    'light text-dark',
+    'dark',
+    'black',
+  ]
+.h2 Button
+.row
+  each className in list
+    .col-6.col-md-2.mb-3
+      .demo-text='.style-' + className
+      button.button.w-100(class='style-'+className) button
+
+.demo-line
+.h2 style-outline
+.row
+  each className in list
+    .col-6.col-md-2.mb-3
+      .demo-text='.style-outline-' + className
+      button.button.w-100(class='style-outline-'+className) button
+
+.demo-line
+.h2 Disabled state
+.row
+  each className in list
+    .col-6.col-md-2.mb-3
+      .demo-text='.style-' + className
+      button.button.w-100.style-disabled(class='style-'+className) button

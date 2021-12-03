@@ -1,0 +1,50 @@
+mixin list(className)
+  ul(class=className)
+    li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      ul(class=className)
+        li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          ul(class=className)
+            li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+.h1 Lists
+article
+  .demo-p
+    .demo-text .list-unstyled
+    +list('list-unstyled')
+  .demo-p
+    .demo-text .style-decimal
+    +list('style-decimal')
+  .demo-p
+    .demo-text .style-loweralpha
+    +list('style-loweralpha')
+  .demo-p
+    .demo-text
+    +list('')
+  ol
+    li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      ol
+        li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          ol
+            li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  .demo-p
+    .demo-text .list-style-custom
+    ul.list-style-custom
+      li(data-label="⭐") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      li(data-label="⭐") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      li(data-label="⭐") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      ul.list-style-custom
+        li(data-label="⭐") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        li(data-label="⭐") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        li(data-label="⭐") Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -1,0 +1,32 @@
+.h3 News item 
+mixin content(rowClassName, colClassName='col-md-4')
+  .demo-text 
+    block
+  ul.news-list.row.mb-4(class=rowClassName)
+    li.news-item(class=colClassName)
+      .news-item-content
+        h3.news-item-name Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis necessitatibus.
+        p.news-item-description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis necessitatibus, quo sunt officiis ut sit magni provident esse? Voluptatum eaque distinctio alias facere culpa fugiat molestias et quia dicta natus?
+    li.news-item(class=colClassName)
+      .news-item-content
+        h3.news-item-name Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis necessitatibus.
+        p.news-item-description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis necessitatibus, quo sunt officiis ut sit magni provident esse? Voluptatum eaque distinctio alias facere culpa fugiat molestias et quia dicta natus?
+    li.news-item(class=colClassName)
+      .news-item-content
+        h3.news-item-name Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis necessitatibus.
+        p.news-item-description Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis necessitatibus, quo sunt officiis ut sit magni provident esse? Voluptatum eaque distinctio alias facere culpa fugiat molestias et quia dicta natus?
+
++content('no-gutters')
+  span .row.no-gutters (no padding)
++content('gutter-5')
+  span .row.gutter-5 (padding 2.5px)
++content('gutter-10')
+  span .row.gutter-10 (padding 5px)
++content('gutter-15')
+  span .row.gutter-15 (padding 7.5px)
++content('gutter-20')
+  span .row.gutter-20 (padding 10px)
++content('gutter-25')
+  span .row.gutter-25 (padding 12.5px)
++content
+  span .row with default gutter 30px (padding 15px)

@@ -1,0 +1,32 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import {{ properCase name }} from './{{ properCase name }}.vue';
+
+
+<Meta title='{{ properCase name }}' component={
+  {{ properCase name }}
+} />
+
+# {{ properCase name }}
+
+Some **markdown** description, or whatever you want.
+
+<Story name='basic' height='auto'>\{{
+  components: {
+    {{ properCase name }}
+  },
+  data(){
+    return {}
+  },
+  methods:{
+  },
+  template: `
+    <{{ properCase name }} />
+  `,
+}}</Story>
+
+
+## Props
+
+<Props of={
+  {{ properCase name }}
+} />

@@ -1,0 +1,32 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import ErrorMessage from './ErrorMessage.vue';
+
+
+<Meta title='ErrorMessage' component={
+  ErrorMessage
+} />
+
+# ErrorMessage
+
+Some **markdown** description, or whatever you want.
+
+<Story name='basic' height='auto'>{{
+  components: {
+    ErrorMessage
+  },
+  data(){
+    return {}
+  },
+  methods:{
+  },
+  template: `
+    <ErrorMessage />
+  `,
+}}</Story>
+
+
+## Props
+
+<Props of={
+  ErrorMessage
+} />
