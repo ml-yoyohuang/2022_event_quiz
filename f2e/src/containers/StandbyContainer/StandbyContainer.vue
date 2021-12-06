@@ -17,6 +17,7 @@ export default {
   data: (): Data => ({
     interval: undefined,
     status: -1,
+    ans1: -1,
   }),
   computed: {
     ...Vuex.mapState([]),
@@ -31,11 +32,17 @@ export default {
       return this.status;
     },
   },
+  watch: {
+    // status() {
+    //   if (this.status == 2) {
+    //   }
+    // },
+  },
   mounted() {
-    this.fetchStatus();
-    // this.interval = workerTimer.setInterval(() => {
-    //   this.fetchStatus();
-    // }, 1000);
+    // this.fetchStatus();
+    this.interval = workerTimer.setInterval(() => {
+      this.fetchStatus();
+    }, 1000);
     // workerTimer.clearInterval(interval);
   },
   beforeDestroy() {
@@ -47,6 +54,7 @@ export default {
       const url = 'https://script.google.com/macros/s/AKfycbwg2oc6Zbxbj4Xb2cEMx-UY1RdIy5HN_A6obFrF_Bs_Wu4h3cw/exec';
       const postData = {
         id: this.id,
+        ans: this.ans1,
       };
       axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
@@ -60,6 +68,7 @@ export default {
           }
         });
     },
+    sendAns() {},
   },
 };
 </script>
@@ -69,7 +78,16 @@ export default {
   h1.h1 Welcome, {{id}}
   template(v-if="status>-1")
     .h1 {{statusName}}
-
+  .row(v-if="status==1")
+    .col-6
+      input(type="radio" v-model="ans1" value="1" name="q1")
+      |Y
+    .col-6
+      input(type="radio" v-model="ans1" value="0" name="q1")
+      |N
+  template(v-if="status==2")
+    h1(v-if="ans1===1") 答對了
+    h1(v-else) 答錯了
 </template>
 
 <style lang="stylus">

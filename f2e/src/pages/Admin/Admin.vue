@@ -49,6 +49,8 @@ export default {
     h1 admin
     .p-4
       button.button(@click="changeStatus(1)") 開始第一題
+      button.button(@click="changeStatus(2)") 結束第一題
+      button.button(@click="changeStatus(0)") 回待機畫面
 </template>
 
 <style lang="stylus">
